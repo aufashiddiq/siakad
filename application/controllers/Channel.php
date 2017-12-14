@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Channel extends CI_Controller{
   function __construct() {
     parent::__construct();
+    // $this->API="http://localhost/siakadapi/index.php/channel";
     $this->API="http://siakadapi.000webhostapp.com/index.php/channel";
     $this->load->library('session');
     $this->load->library('curl');

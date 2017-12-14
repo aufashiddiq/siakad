@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 $user_id=$this->session->userdata('username');
 
 if(!$user_id){
@@ -6,35 +6,41 @@ if(!$user_id){
   redirect('login');
 }
 
- ?> -->
- <?php session_start(); ?>
-<table border="1">
+foreach ($user as $row) {
+ ?>
+ <div class="thumbnail">
+<h2>Profil</h2>
+<img class="user-profile-img" src="<?php echo base_url('assets/img/profile.png');?>" alt="">
+
+<table class="table">
   <tr>
-    <td>NIM</td>
-    <td><?php echo $this->session->userdata('username');?></td>
+    <th width="20%">NIM</th>
+    <td><?php echo $row->username;?></td>
   </tr>
   <tr>
-    <td>Nama</td>
-    <td><?php echo $this->session->userdata('nama');?></td>
+    <th>Nama</th>
+    <td><?php echo $row->nama;?></td>
   </tr>
   <tr>
-    <td>Tempat Lahir</td>
-    <td><?php echo $this->session->userdata('tmpt_lahir');?></td>
+    <th>Tempat Lahir</th>
+    <td><?php echo $row->tmpt_lahir;?></td>
   </tr>
   <tr>
-    <td>Tanggal Lahir</td>
-    <td><?php echo $this->session->userdata('tgl_lahir');?></td>
+    <th>Tanggal Lahir</th>
+    <td><?php echo $row->tgl_lahir;?></td>
   </tr>
   <tr>
-    <td>Jenis Kelamin</td>
-    <td><?php echo $this->session->userdata('jk');?></td>
+    <th>Jenis Kelamin</th>
+    <td><?php echo $row->jk;?></td>
   </tr>
   <tr>
-    <td>Asal</td>
-    <td><?php echo $this->session->userdata('asal');?></td>
+    <th>Asal</th>
+    <td><?php echo $row->asal;?></td>
   </tr>
   <tr>
-    <td>Angkatan</td>
-    <td><?php echo $this->session->userdata('angkatan');?></td>
+    <th>Angkatan</th>
+    <td><?php echo $row->angkatan;?></td>
   </tr>
 </table>
+<?php } ?>
+</div>

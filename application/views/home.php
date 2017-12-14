@@ -2,24 +2,31 @@
 <br>
 <h4>Berita</h4><hr>
 <?php 
-for ($i=0; $i < 3; $i++) { 
+foreach ($berita as $row) { 
 ?>
 <div class="thumbnail">
-	<h3><a href="detail.html">Judul Berita</a></h3>
-	<hr>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare sem porta lectus pharetra iaculis. Phasellus placerat non mauris sit amet consectetur. Praesent efficitur diam in massa egestas lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nec faucibus sem, ac rutrum nulla. Nunc eleifend luctus facilisis.  </p>
-	<a href="detail.html">Selengkapnya...</a>
+	<img class="profile-img" src="http://www.pixempire.com/images/preview/administrator-icon.jpg" alt="">
+	<div class="col-sm-offset-2">
+		<h3><a href="<?php echo base_url('berita/detail/'.$row->id_berita); ?>"><?php echo $row->judul; ?></a></h3>
+		<hr>
+		<p><?php echo $row->konten; ?></p>
+		<a href="<?php echo base_url('berita/detail/'.$row->id_berita); ?>">Selengkapnya...</a>
+		<br><br>
+	</div>
 </div>
 <?php } ?>
 <br>
 <h4>Event</h4><hr>
 <?php 
-for ($i=1; $i < 3; $i++) { 
+foreach ($event as $row) { 
 ?>
 <div class="thumbnail">
-	<h3><a href="#">Event <?php echo $i; ?></a></h3>
-	<hr>
-	<p>Selasa, 17 Oktober 2017 @ Auditorium </p>
+	<img class="profile-img" src="https://st2.depositphotos.com/6628792/10391/v/950/depositphotos_103919120-stock-illustration-training-seminar-icon.jpg" alt="">
+	<div class="col-sm-offset-2">
+		<h3><a href="#"><?php echo $row->nama_event; ?></a></h3>
+		<hr>
+		<p><?php echo $row->tgl_event; ?> @ <?php echo $row->tempat; ?> </p>
+	</div>
 </div>
 <?php } ?>
 <br>

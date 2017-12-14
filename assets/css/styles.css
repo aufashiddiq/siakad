@@ -15,82 +15,62 @@ header{
 .navbar-brand {
     color: #FFF;
 }
-.menu{
-    position: fixed;
-    background: #222;
-    color: #fff;			
-    height: 100%;
-    width: 200px;
-    top: 0;
-    left: -300px;
-    -webkit-transition: left 0.2s;
-    transition: left 0.2s;
-    padding-top: 20px;
-}
-
-.menu ul{
-    padding: 0;
-}
-
-.menu li{
-    list-style-type: none;
-    padding: 3px 0px;
-}
-
-.menu a{
-    color: #FFF;
-    text-decoration: none;
-    font-size: 12pt;
-    padding-left:10px;
-}
-
-.menu a:hover{
-    width: 100%;
-    color: #444;
-}
-
-.tombol{
-    float: left;
-    background: transparent;
-    color: #fff;
-    font-size: 20pt;
-    cursor: pointer;
-}
-
-.slide-menu-tampil{
-    left: 0 !important;
-}
-
-.slide-menu-hide {
-    left: -300px;
-}
 
 .thumbnail {
     padding-left: 10px;
+    min-height: 180px;
 }
 
 .close {
     text-align: right;
 }
 
-
-@media (min-width: 768px) {
-    .menu {
-        left: 0;
-        top: 53px;
-    }
-    .tombol {
-        display: none;
-    }
-    .close {
-        display: none;
-    }
+.profile-img
+{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 10px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
 }
-@media (max-width: 767px) {
-    .icon {
-        display: none;
-    }
-    #head {
-        display: none;
+
+.user-profile-img
+{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+}
+
+#side-menu {
+    background-color: #444;
+    width: 200px;
+    height: 1000px;
+    top: 53px;
+    position: fixed;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+}
+
+li>a {
+    color: #FFF;
+}
+
+@media (min-width: 993px) {
+
+}
+@media (max-width: 992px) {
+    #side-menu {
+        position: unset;
+        height: fit-content;
+        width: 105%;
+        z-index: -4;
+        margin-top: 150px;
     }
 }
